@@ -9,6 +9,7 @@ const About = () => {
         There is No Use of Backend in it. 
         So it is an fully functional Frontend Website.
       </p>
+
     </div>
   )
 }

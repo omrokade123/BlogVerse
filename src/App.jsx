@@ -10,6 +10,7 @@ import { useState, useEffect } from "react";
 import {format} from 'date-fns'
 import api from './api/posts';
 import EditPost from "./EditPost";
+// import useWindowSize from "./hooks/useWindowSIze";
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -21,6 +22,7 @@ function App() {
   const [editTitle, setEditTitle] = useState("");
   const [editBody, setEditBody] = useState("");
   const Navigate = useNavigate();
+  //const {width} = useWindowSize()
 
   useEffect(() => {
     const fetchPost = async () => {
@@ -117,19 +119,6 @@ function App() {
               />
             }
           />
-          {/* <Route
-            path="/edit/:id"
-            element={
-              <EditPost
-                posts={posts}
-                handleEdit={handleEdit}
-                editTitle={editTitle}
-                setEditTitle={setEditTitle}
-                editBody={editBody}
-                setEditBody={setEditBody}
-              />
-            }
-          /> */}
           <Route path="/edit/:id"
            element={
             <EditPost
@@ -151,6 +140,7 @@ function App() {
           <Route path="*" Component={Missing} />
         </Route>
       </Routes>
+     
     </div>
   );
 }
