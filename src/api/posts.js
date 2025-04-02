@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export default  axios.create({
-    baseURL: 'https://omrokade123.github.io/BlogVerse/'
+    baseURL: 'http://localhost:3500'
 });
 
-//http://localhost:3500
+//
